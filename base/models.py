@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from base.views import room
 # Create your models here.
 class Topic(models.Model):
     name = models.CharField(max_length=200)
