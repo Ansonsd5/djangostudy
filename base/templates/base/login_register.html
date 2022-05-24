@@ -19,17 +19,18 @@
     <a href="{% url 'register' %}">Sign UP</a>
 
 </div>
-{%else%}
+{% else %}
 <div>
 
     <form method="POST" action="">
         {% csrf_token %}
+        {{form.as_p}}
 
         <input type="submit" value="Register" />
     </form>
 
     <p>Already signed up?</p>
-    <a href="{ url 'login'}">Login</a>
+    <a href="{% url 'login' %}">Login</a>
 </div>
 {% endif %}
 {% endblock content%}
